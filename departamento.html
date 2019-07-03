@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="">
+
+    <title>Dashboard Employees</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500" rel="stylesheet" />
+    <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="css/normalize/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+    <!-- jquery loading modal -->
+    <link rel="stylesheet" href="css/jquery.loadingModal/jquery.loadingModal.min.css">
+    
+    <!-- nprogress -->
+    <link rel="stylesheet" href="css/nprogress/nprogress.css">
+
+    <!-- sleek -->
+    <link rel="stylesheet" href="css/sleek/sleek.min.css">
+    
+    <!-- highcharts -->
+    <link rel="stylesheet" href="css/highcharts/highcharts.css">
+
+    <!-- FAVICON -->
+    <link href="assets/img/favicon.png" rel="shortcut icon" />
+
+</head>
+
+
+<body class="header-fixed sidebar-fixed sidebar-dark header-light" id="body">
+
+    <div class="mobile-sticky-body-overlay"></div>
+
+    <!-- <div id="toaster"></div> -->
+
+    <div class="wrapper" id="departamento">
+
+        <!--
+            ===================
+            ——— LEFT SIDEBAR 
+            ===================
+        -->
+        <aside class="left-sidebar bg-sidebar">
+            <div id="sidebar" class="sidebar sidebar-with-footer">
+                <!-- Aplication Brand -->
+                <div class="app-brand">
+                    <a href="#">
+                        <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
+                            width="30" height="33" viewBox="0 0 30 33">
+                            <g fill="none" fill-rule="evenodd">
+                                <path class="logo-fill-blue" fill="#7DBCFF" d="M0 4v25l8 4V0zM22 4v25l8 4V0z" />
+                                <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
+                            </g>
+                        </svg>
+                        <span class="brand-name">Employees</span>
+                    </a>
+                </div>
+                <!-- begin sidebar scrollbar -->
+                <div class="sidebar-scrollbar">
+
+                    <!-- sidebar menu -->
+                    <ul class="nav sidebar-inner" id="sidebar-menu">
+
+                        <li class="has-sub expand">
+                            <a class="sidenav-item-link" href="index.html" aria-expanded="false" aria-controls="dashboard">
+                                <i class="mdi mdi-account-box-multiple"></i>
+                                <span class="nav-text">Funcionários</span>
+                            </a>
+                        </li>                        
+
+                        <li class="has-sub active expand">
+                            <a class="sidenav-item-link" href="departamento.html" aria-expanded="false" aria-controls="dashboard">
+                                <i class="mdi mdi-book"></i>
+                                <span class="nav-text">Departamentos</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+
+        <div class="page-wrapper">
+            <!-- Header -->
+            <header class="main-header " id="header">
+                <nav class="navbar navbar-static-top navbar-expand-lg">
+                    <!-- Sidebar toggle button -->
+                    <button id="sidebar-toggler" class="sidebar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
+                </nav>
+
+            </header>
+
+            <div class="content-wrapper">
+                <div class="content">
+                   
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12">
+                            <!-- Sales Graph -->
+                            <div class="card card-default" data-scroll-height="550">
+
+                                <div class="card-header">
+                                    <h2>Salários por Departamento</h2>
+                                </div>
+
+                                <div class="card-body">
+                                    <div id="graf-departamentos"></div>
+                                </div>
+
+                                <div class="card-footer d-flex flex-wrap bg-white p-0">
+                          
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-4 col-md-12"></div>
+                    </div>
+                </div>
+                <!-- content -->
+            </div>
+            <!-- content wraper -->
+        </div>
+        <!-- page wraper -->
+    </div>
+    <!-- wraper -->
+
+
+
+
+    <!-- jquery -->
+    <script src="js/jquery/jquery-3.3.1.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- slim scroll -->
+    <script src="js/slimscrollbar/jquery.slimscroll.min.js"></script>
+    
+    <script src="js/nprogress/nprogress.js"></script>
+
+    <!-- sleek -->
+    <script src="js/sleek/sleek.bundle.min.js"></script>
+
+    <!-- jquery loading modal -->
+    <script src="js/jquery.loadingModal/jquery.loadingModal.min.js"></script>
+
+    <!-- highcharts -->
+    <script src="js/highcharts/highcharts.js"></script>
+    <script src="js/highcharts/modules/series-label.js"></script>
+
+    <!-- vue -->
+    <script src="js/vuejs/vue.min.js"></script>
+
+    <!-- scripts -->
+    <script src="js/script/loading.js"></script>
+    <script src="js/script/departamento.js"></script>
+
+</body>
+
+</html>
+
+
+
