@@ -10,10 +10,10 @@ https://github.com/datacharmer/test_db
 
 ### Prints
 
-**Gráficos que demonstra a evolução salarial do funcionário no decorrer dos anos**
-
 ![Evolução Salarial do Funcionário](https://raw.githubusercontent.com/AngeloPinto/Projeto-Dashboard/master/prints/image01.png)
+*Gráficos que demonstra a evolução salarial do funcionário no decorrer dos anos*
 
-**Gráficos que demonstra o total pago em salários de cada departamento com seus respectivos percentuais**
+
 
 ![Evolução Salarial do Funcionário](https://raw.githubusercontent.com/AngeloPinto/Projeto-Dashboard/master/prints/image02.png)
+*Gráficos que demonstra o total pago em salários de cada departamento com seus respectivos percentuais*
