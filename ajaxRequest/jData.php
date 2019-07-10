@@ -6,7 +6,7 @@ require_once ("./../class/classEmployee.php");
 
 // $_POST['EMP_NO']  = '10011';
 // $_POST['DEPT_NO'] = 'd009';
-// $_POST['metodo']  = 'ajax_departamento_funcionarios';
+// $_POST['metodo']  = 'ajax_teste';
 
 
 if (function_exists($_POST['metodo']))  {

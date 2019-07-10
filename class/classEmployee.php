@@ -10,9 +10,14 @@ class Employee{
 
     function consulta_teste(){
         
-        $sql = "SELECT * FROM employees limit 5";
+        $sql = "SELECT * FROM EMPLOYEES LIMIT :LIMITE";
         
-        $data = $this->conexao->select($sql, 1);
+        $bind = array("field" => array(":LIMITE"), 
+                      "value" => array( 2 ),
+                      "size"  => array( 3 )
+                    );        
+
+        $data = $this->conexao->select($sql, 1, $bind);                    
 
         return $data;
 
@@ -44,10 +49,15 @@ class Employee{
                         DATE_FORMAT(S.FROM_DATE, '%Y') AS ANO
                         ,(SELECT MAX(S2.SALARY) FROM SALARIES S2 WHERE S2.EMP_NO = S.EMP_NO AND DATE_FORMAT(S2.FROM_DATE, '%Y') = DATE_FORMAT(S.FROM_DATE, '%Y')) AS SALARIO
                 FROM SALARIES S
-                WHERE S.EMP_NO = $emp_no
+                WHERE S.EMP_NO = :EMP_NO
                 ORDER BY ANO";
 
-        $data = $this->conexao->select($sql, 0);
+        $bind = array("FIELD" => array(":EMP_NO"), 
+                      "VALUE" => array( $emp_no ),
+                      "SIZE"  => array( 10      )
+                    );
+
+        $data = $this->conexao->select($sql, 0, $bind);
 
         return $data;
 
@@ -96,13 +106,18 @@ class Employee{
                 
                 INNER JOIN EMPLOYEES E ON E.EMP_NO = DE.EMP_NO
                 
-                WHERE   DE.DEPT_NO            = '$dept_no'
-                    AND E.GENDER              = '$genero'
-                    AND LEFT(E.FIRST_NAME, 1) = '$inicial'
+                WHERE   DE.DEPT_NO            = :DEPT_NO
+                    AND E.GENDER              = :GENERO
+                    AND LEFT(E.FIRST_NAME, 1) = :INICIAL
 
                 ORDER BY NOME";
 
-        $data = $this->conexao->select($sql, 1);
+        $bind = array(  "FIELD" => array(":DEPT_NO", ":GENERO", ":INICIAL"),
+                        "VALUE" => array( $dept_no ,  $genero ,  $inicial ),
+                        "SIZE"  => array( 10       ,  1       ,  1        )
+                    );
+
+        $data = $this->conexao->select($sql, 1, $bind);
 
         return $data;
 
